@@ -269,6 +269,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gulp", "Gulp", "{90EBEE36-B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airbrush", "Orchard.Web\Modules\Airbrush\Airbrush.csproj", "{6A8877E0-81FC-4E9D-A422-78CE17B70425}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirbrushTheme", "Orchard.Web\Themes\AirbrushTheme\AirbrushTheme.csproj", "{AF6F4BB8-192F-4BB2-8955-312E87C3AA01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeCoverage|Any CPU = CodeCoverage|Any CPU
@@ -1078,6 +1080,13 @@ Global
 		{6A8877E0-81FC-4E9D-A422-78CE17B70425}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
 		{6A8877E0-81FC-4E9D-A422-78CE17B70425}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A8877E0-81FC-4E9D-A422-78CE17B70425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF6F4BB8-192F-4BB2-8955-312E87C3AA01}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6F4BB8-192F-4BB2-8955-312E87C3AA01}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6F4BB8-192F-4BB2-8955-312E87C3AA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6F4BB8-192F-4BB2-8955-312E87C3AA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6F4BB8-192F-4BB2-8955-312E87C3AA01}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6F4BB8-192F-4BB2-8955-312E87C3AA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6F4BB8-192F-4BB2-8955-312E87C3AA01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1163,5 +1172,6 @@ Global
 		{82190F52-2901-46D6-8A4C-34649959483F} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{90EBEE36-B5CD-42A8-A21B-76270E2C5D24} = {DF3909B0-1DDD-4D8A-9919-56FC438E25E2}
 		{6A8877E0-81FC-4E9D-A422-78CE17B70425} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
+		{AF6F4BB8-192F-4BB2-8955-312E87C3AA01} = {74492CBC-7201-417E-BC29-28B4C25A58B0}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,8 @@
+Name: AirbrushTheme
+Author: The Orchard Team
+Website: http://www.orchardproject.net
+Description: Description for the theme
+Version: 1.0
+BaseTheme: PJS.Bootstrap
+# todo: provide tags
+# Tags: Classic, Serif
