@@ -1,0 +1,51 @@
+﻿@using Orchard.ContentManagement;
+@using Airbrush.Models;
+@using Orchard.Core.Common.Models;
+@using Orchard.Core.Title.Models;
+
+@*@Style.Include("~/Modules/Airbrush/Styles/Contact.css").AtHead()*@
+
+@model Airbrush.ViewModels.ContactFormEntryListViewModel
+
+@{ 
+    Style.Include("Contact.css");
+}
+
+<div class="dashboard-container">
+    <figure>
+        <figcaption>@T("Contact verzoeken door bezoekers ingestuurd.")</figcaption>
+            <ol class="contactformentry-list">
+
+                @for (int i = 0; i < Model.ContactFormEntries.Count; i++)
+                {
+                    <li value="@i" class="contactformentry-listitem">
+                        <div>
+                            <div>
+                                @Html.DisplayFor(x => x.ContactFormEntries.ElementAt(i).As<ContactFormEntryPart>().SenderName)
+                            </div>
+                            <div>
+                                @Html.DisplayFor(x => x.ContactFormEntries.ElementAt(i).As<ContactFormEntryPart>().SenderEmail)
+                            </div>
+                            <div>
+                                @Html.DisplayFor(x => x.ContactFormEntries.ElementAt(i).As<TitlePart>().Title)
+                            </div>
+                            <div>
+                                @Html.DisplayFor(x => x.ContactFormEntries.ElementAt(i).As<CommonPart>().CreatedUtc)
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                @Html.DisplayFor(x => x.ContactFormEntries.ElementAt(i).As<BodyPart>().Text)
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                @Html.AntiForgeryTokenValueOrchardLink(T("Delete").Text, Url.Action("Delete", "ContactAdmin", new { id = Model.ContactFormEntries.ElementAt(i).Id }), new { itemprop = "UnsafeUrl RemoveUrl" })
+                                @*@Html.ActionLink(T("Delete").Text, "Delete", "ContactAdmin", new { id = Model.ContactFormEntries.ElementAt(i).Id })*@
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ol>
+    </figure>
+</div>

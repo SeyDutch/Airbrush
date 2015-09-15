@@ -1,0 +1,35 @@
+﻿@model Airbrush.ViewModels.ContactFormEntryViewModel
+
+
+<div class="contactform-container">
+
+    @T("Door dit formulier in te vullen neemt u contact met mij op.")
+
+    <br />
+
+    <fieldset>
+        <legend>@T("Contact formulier")</legend>
+        
+        @Html.ValidationSummary()
+
+        @using (Html.BeginFormAntiForgeryPost())
+        {
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new { @class = "text", required = "required",  })
+
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "text", type = "email", required = "required" })
+
+            @Html.LabelFor(m => m.Subject)
+            @Html.TextBoxFor(m => m.Subject)
+
+            @Html.LabelFor(m => m.MessageBody, T("Bericht of vraag"))
+            @Html.TextAreaFor(m => m.MessageBody, new { @class = "text", required = "required" })
+
+            <br/>
+
+            <button type="submit"><span>@T("Verstuur")</span></button>
+        }
+    </fieldset>
+
+</div>

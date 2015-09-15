@@ -1,0 +1,22 @@
+﻿@model Airbrush.ViewModels.GalleryViewModel
+
+@{  Script.Require("TweenMax");
+
+
+
+}
+  @* Should load all its dependencies as listed in ResourceManifest.cs *@
+
+
+<div class="gallery-page">
+    
+    <h1> @T("Gallery") </h1>
+
+
+    @foreach(var item in Model.GalleryItems)
+    {
+       <img src="@item.MediaUrl" style="width: 50%; height: 50%;" />
+        
+        <span>test</span>
+    }
+</div>

@@ -1,0 +1,57 @@
+﻿<h1>Contact Page Admin Page</h1>
+<p>Edit information as it needs to show on the Contact page.</p>
+
+@model Airbrush.ViewModels.ContactPageViewModel
+
+@Html.ValidationSummary()
+@using (Html.BeginFormAntiForgeryPost())
+{
+    <div class="dashboard-edit-container contactpage-edit">
+        <fieldset>
+
+            <div class="page-text-edit">
+                <label class="sub" for="MainText">@T("Main Text")</label><br />
+                @Html.TextAreaFor(m => m.MainText, new { @class = "text" })<br />
+                <label class="sub" for="ExtraText">@T("Extra Text")</label><br />
+                @Html.TextAreaFor(m => m.ExtraText, new { @class = "text" })<br />
+            </div>
+
+            <br/>
+
+            <label class="sub" for="Phone">@T("Phone")</label><br />
+            @Html.TextBoxFor(m => m.Phone, new { @class = "text" })<br />
+            <label class="sub" for="Email">@T("Email")</label><br />
+            @Html.TextBoxFor(m => m.Email, new { @class = "text" })<br />
+            <label class="sub" for="AddressName">@T("Address Name")</label><br />
+            @Html.TextBoxFor(m => m.AddressName, new { @class = "text" })<br />
+            <label class="sub" for="AddressLine">@T("Address Line")</label><br />
+            @Html.TextBoxFor(m => m.AddressLine, new { @class = "text" })<br />
+            <label class="sub" for="City">@T("City")</label><br />
+            @Html.TextBoxFor(m => m.City, new { @class = "text" })<br />
+            <label class="sub" for="PostalCode">@T("Postal Code")</label><br />
+            @Html.TextBoxFor(m => m.PostalCode, new { @class = "text" })<br />
+
+            <br />
+            <fieldset>
+                @T("Link 1")<br />
+                <label class="sub" for="Link1Name">@T("Name")</label><br />
+                @Html.TextBoxFor(m => m.Link1Name, new { @class = "text" })<br />
+                <label class="sub" for="Link1Uri">@T("Uri")</label><br />
+                @Html.TextBoxFor(m => m.Link1Url, new { @class = "text" })<br />
+            </fieldset>
+
+            <br />
+            <fieldset>
+                @T("Link 2")<br />
+                <label class="sub" for="Link2Name">@T("Name")</label><br />
+                @Html.TextBoxFor(m => m.Link2Name, new { @class = "text" })<br />
+                <label class="sub" for="Link2Uri">@T("Uri")</label><br />
+                @Html.TextBoxFor(m => m.Link2Url, new { @class = "text" })<br />
+            </fieldset>
+
+            <br />
+
+            <button type="submit"><span>Save</span></button>
+        </fieldset>
+    </div>
+}

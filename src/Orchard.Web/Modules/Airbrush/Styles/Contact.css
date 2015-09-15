@@ -1,0 +1,54 @@
+﻿div.dashboard-container{
+   
+}
+
+ol.contactformentry-list{
+    list-style: none;
+}
+ol.contactformentry-list > li:nth-child(odd){
+    background-color: #DAE3E8 !important;
+}
+li.contactformentry-listitem{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;  
+  
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+    -ms-box-orient: horizontal;
+    -webkit-flex-direction: row; 
+    flex-direction: row;
+
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+    
+    -webkit-box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    4px 4px 17px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
+    margin: .7em;
+
+    background-color: #F1F1F1
+}
+
+li.contactformentry-listitem > div {
+    margin: .5em;
+}
+li.contactformentry-listitem > div:nth-child(1){
+    min-width: 17em;
+}
+li.contactformentry-listitem > div:nth-child(2){
+    flex-grow: 5;
+}
+li.contactformentry-listitem > div:nth-child(3){
+    align-self: flex-end;
+}
+li.contactformentry-listitem a{
+    color:purple;
+    margin: .5em;
+}
+li.contactformentry-listitem a:hover{
+    font-weight:bold;
+    color:red;
+}

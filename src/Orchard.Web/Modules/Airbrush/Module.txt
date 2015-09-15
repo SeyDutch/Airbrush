@@ -1,10 +1,10 @@
 ﻿Name: Airbrush
 AntiForgery: enabled
-Author: The Orchard Team
+Author: Eric Fransen
 Website: http://orchardproject.net
 Version: 1.0
-OrchardVersion: 1.0
-Description: Description for the module
+OrchardVersion: 1.9.1
+Description: Module for Airbrush site.
 Features:
     Airbrush:
-        Description: Description for feature Airbrush.
+        Description: Airbrush site.
