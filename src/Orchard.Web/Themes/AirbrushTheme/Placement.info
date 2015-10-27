@@ -14,4 +14,9 @@
     <Place Parts_Common_Metadata="-"/>
   </Match>
 -->
+  <Match ContentType="CarouselImage">
+    <Match DisplayType="Summary">
+      <Place Fields_Image="Content"/>
+    </Match>
+  </Match>
 </Placement>

@@ -6,8 +6,10 @@ using Orchard.ContentManagement;
 using System.Linq;
 using System.Collections.Generic;
 using Airbrush.ViewModels;
+using Orchard.Themes;
 
 namespace Airbrush.Controllers {
+    [Themed]
     public class GalleryController : Controller {
         public IOrchardServices Services { get; set; }
         private readonly INotifier _notifier;
@@ -22,13 +24,16 @@ namespace Airbrush.Controllers {
 
         [HttpGet]
         public ActionResult Index()
-        { //MediaLibraryPickerField ff;
-            var galleryItems = Services.ContentManager.Query("GalleryItem").List();
-            var parts = galleryItems.Select(g => g.Parts.Single(x => x.Fields.Any(f => f.Name == "Image")));
+        {
             var vm = new GalleryViewModel();
-
-            parts.ToList().ForEach(p => vm.GalleryItems.Add(new GalleryViewModel.GalleryItemViewModel(
-                ((dynamic)p.Fields.SingleOrDefault(x => x.Name == "Image")).MediaParts[0].MediaUrl)));
+            var galleryItems = Services.ContentManager.Query("GalleryItem").List();
+            if(galleryItems.Any())
+            {
+                var parts = galleryItems.Select(g => g.Parts.Single(x => x.Fields.Any(f => f.Name == "Imagepicker")));
+                parts.ToList().ForEach(p => vm.GalleryItems.Add(new GalleryViewModel.GalleryItemViewModel(
+                    ((dynamic)p.Fields.SingleOrDefault(x => x.Name == "Imagepicker")).MediaParts[0].MediaUrl)));
+            }
+            
             
             return View(vm);
         }

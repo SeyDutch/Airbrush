@@ -78,7 +78,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ExtLib\HtmlAgilityPack.XML" />
+    <Content Include="Scripts\pgwslideshow.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\PgwSlideshow\pgwslideshow.css" />
+    <Content Include="Scripts\PgwSlideshow\pgwslideshow.js" />
+    <Content Include="Scripts\PgwSlideshow\pgwslideshow.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\PgwSlideshow\pgwslideshow.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\PgwSlideshow\pgwslideshow_light.css" />
+    <Content Include="Scripts\PgwSlideshow\pgwslideshow_light.min.css" />
+    <Content Include="Scripts\slideshow_init.js" />
     <Content Include="Styles\Contact.css" />
+    <Content Include="Styles\Gallery.css" />
+    <Content Include="Styles\pgwslideshow.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\Styles.min.css" />
     <Content Include="Web.config" />
@@ -116,6 +134,7 @@
     <Compile Include="Models\ContactPage.cs" />
     <Compile Include="Models\ContactPageRecord.cs" />
     <Compile Include="Providers\Menu\AdminMenu.cs" />
+    <Compile Include="ResourceManifest.cs" />
     <Compile Include="Routes.cs" />
     <Compile Include="Services\ContactFormService.cs" />
     <Compile Include="Services\ContactInfoService.cs" />
@@ -124,7 +143,7 @@
     <Compile Include="Services\MailService.cs" />
     <Compile Include="ViewModels\ContactFormEntryListViewModel.cs" />
     <Compile Include="ViewModels\ContactFormEntryViewModel.cs" />
-    <Compile Include="ViewModels\ContactViewModel.cs" />
+    <Compile Include="ViewModels\ContactPageViewModel.cs" />
     <Compile Include="ViewModels\GalleryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +165,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Gallery\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Gallery.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\PgwSlideshow\LICENSE.md" />
+    <Content Include="Scripts\PgwSlideshow\package.json" />
+    <Content Include="Scripts\PgwSlideshow\pgwslideshow.jquery.json" />
+    <Content Include="Scripts\PgwSlideshow\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\PgwSlideshow\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

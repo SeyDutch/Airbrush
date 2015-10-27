@@ -188,3 +188,5 @@ src/Orchard.Azure/Orchard.Azure.CloudService/Staging/
 #enable all /lib artifacts
 !lib/*/*.*
 */.vs/*
+/src/Orchard.Web/Modules/TinyMceDeluxe
+/src/Orchard.Web/Modules/_Backup
