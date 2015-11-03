@@ -7,7 +7,7 @@
 .widget-carouselwidget{
     margin: 40px auto;
     width:768px;
-    height: 250px;
+    height: 350px;
     position: relative;
     background-color: rgba(25, 25, 25, .7);
     -webkit-box-shadow: 5px 8px 17px 0px rgba(50, 50, 50, 0.75);
@@ -17,12 +17,12 @@
 
 #myCarousel{
     width:768px;
-    height: 250px;
+    height: 350px;
 }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     width:768px;
-    max-height: 250px;
+    max-height: 350px;
     overflow:hidden;
 }
 

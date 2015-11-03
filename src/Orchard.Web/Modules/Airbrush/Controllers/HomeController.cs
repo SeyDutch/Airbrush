@@ -16,7 +16,6 @@ namespace Airbrush.Controllers {
 
         public Localizer T { get; set; }
 
-        
         [HttpGet]
         public ActionResult Index()
         {

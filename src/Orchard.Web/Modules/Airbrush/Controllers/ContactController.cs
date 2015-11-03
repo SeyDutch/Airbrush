@@ -20,8 +20,6 @@ namespace Airbrush.Controllers {
         public IOrchardServices Services { get; set; }
         protected Localizer T { get; set; }
 
-
-
         public ContactController(IOrchardServices services, IContactInfoService cis, IContactFormService cfs, INotifier notifier, IAuthorizer auth) {
             Services = services;
             _notifier = notifier;
@@ -30,7 +28,6 @@ namespace Airbrush.Controllers {
             _cFS = cfs;
             T = NullLocalizer.Instance;
         }
-
 
         [HttpGet]
         public ActionResult Index()
@@ -67,7 +64,6 @@ namespace Airbrush.Controllers {
             if (!ModelState.IsValid)
                 return View(model);
 
-
             var dm = _cFS.StoreEntry(_cFS.Convert(model));
             if(dm == null)
             {
@@ -76,9 +72,7 @@ namespace Airbrush.Controllers {
             }
 
             return RedirectToAction("Confirmation");
-
         }
-
 
         public ActionResult Confirmation()
         {
