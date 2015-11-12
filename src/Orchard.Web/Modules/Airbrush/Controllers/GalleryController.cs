@@ -7,6 +7,7 @@ using System.Linq;
 using System.Collections.Generic;
 using Airbrush.ViewModels;
 using Orchard.Themes;
+using System;
 
 namespace Airbrush.Controllers {
     [Themed]
@@ -33,13 +34,7 @@ namespace Airbrush.Controllers {
                 parts.ToList().ForEach(p => vm.GalleryItems.Add(new GalleryViewModel.GalleryItemViewModel(
                     ((dynamic)p.Fields.SingleOrDefault(x => x.Name == "Imagepicker")).MediaParts[0].MediaUrl)));
             }
-            /*
-            var test = galleryItems.Select(g => g.Parts.Single(x => x.Fields.Any(f => f.Name == "Imagepicker")))
-                        .First().Fields.ToList();
-
-            var test2 = (ContentField)((dynamic)galleryItems.Select(g => g.Parts.Single(x => x.Fields.Any(f => f.Name == "Imagepicker")))
-                        .First().Fields.SingleOrDefault(x => x.Name == "Imagepicker"));
-                        */
+                        
             return View(vm);
         }
     }

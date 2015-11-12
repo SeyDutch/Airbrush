@@ -77,8 +77,10 @@
     <Content Include="Content\blue-texture.jpg" />
     <Content Include="Content\colorful.jpg" />
     <Content Include="Content\colorful_flower.jpg" />
+    <Content Include="Recipies\CarouselImageRecipe.xml" />
     <Content Include="Scripts\carousel_widget_init.js" />
     <Content Include="Styles\Site.css" />
+    <Content Include="Styles\Site.min.css" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\Styles.min.css" />
     <Content Include="Web.config">

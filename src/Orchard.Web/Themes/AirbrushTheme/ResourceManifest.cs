@@ -7,7 +7,7 @@ namespace AirbrushTheme
         public void BuildManifests(ResourceManifestBuilder builder)
         {
             var manifest = builder.Add();
-            manifest.DefineStyle("Site").SetUrl("Site.css");
+            manifest.DefineStyle("Site").SetUrl("Site.min.css");
             manifest.DefineStyle("CarouselWidget").SetUrl("Carousel.Widget.css");
             manifest.DefineScript("CarouselWidget").SetUrl("carousel_widget_init.js").SetDependencies("jQuery", "Bootstrap");
         }
