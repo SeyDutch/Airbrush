@@ -16,13 +16,16 @@ namespace Airbrush.ViewModels
         public class GalleryItemViewModel
         {
             public string MediaUrl { get; set; }
-
+            public string Title { get; set; }
+            public string Caption { get; set; }
 
             public GalleryItemViewModel()
             { }
-            public GalleryItemViewModel(string mediaUrl)
+            public GalleryItemViewModel(string mediaUrl, string title, string caption)
             {
                 MediaUrl = mediaUrl;
+                Title = title;
+                Caption = caption;
             }
         }
 

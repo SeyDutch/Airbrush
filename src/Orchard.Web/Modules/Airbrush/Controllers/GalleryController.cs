@@ -32,7 +32,9 @@ namespace Airbrush.Controllers {
             {
                 var parts = galleryItems.Select(g => g.Parts.Single(x => x.Fields.Any(f => f.Name == "Imagepicker")));
                 parts.ToList().ForEach(p => vm.GalleryItems.Add(new GalleryViewModel.GalleryItemViewModel(
-                    ((dynamic)p.Fields.SingleOrDefault(x => x.Name == "Imagepicker")).MediaParts[0].MediaUrl)));
+                    ((dynamic)p.Fields.Single(x => x.Name == "Imagepicker")).MediaParts[0].MediaUrl,
+                    ((dynamic)p.Fields.Single(x => x.Name == "Imagepicker")).MediaParts[0].Title,
+                    ((dynamic)p.Fields.Single(x => x.Name == "Imagepicker")).MediaParts[0].Caption)));
             }
                         
             return View(vm);

@@ -3,7 +3,6 @@
 @{
     Style.Require("Slideshow").AtFoot();
     Script.Require("Slideshow").AtFoot();
-    Script.Include("test.js");
 }
 
     <div class="gallery-page">
@@ -15,8 +14,7 @@
 
             @foreach (var m in Model.GalleryItems)
             {
-                <li><img src="@m.MediaUrl" alt="alt" data-description="Golden Gate Bridge"></li>
-               
+                <li><img src="@m.MediaUrl" alt="@m.Title" data-description="@m.Caption"></li>
             }
         </ul>
     </div>

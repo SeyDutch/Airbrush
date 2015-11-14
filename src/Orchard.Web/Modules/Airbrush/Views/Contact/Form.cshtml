@@ -3,7 +3,7 @@
 
 <div class="contactform-container">
 
-    @T("Door dit formulier in te vullen neemt u contact met mij op.")
+    <h2>@T("Door dit formulier in te vullen neemt u contact met mij op.")</h2>
 
     <br />
 
@@ -20,7 +20,7 @@
             @Html.LabelFor(m => m.Email)
             @Html.TextBoxFor(m => m.Email, new { @class = "text", type = "email", required = "required" })
 
-            @Html.LabelFor(m => m.Subject)
+            @Html.Label(T("Onderwerp").Text)
             @Html.TextBoxFor(m => m.Subject)
 
             @Html.LabelFor(m => m.MessageBody, T("Bericht of vraag"))
