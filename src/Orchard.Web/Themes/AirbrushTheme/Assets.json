@@ -4,7 +4,7 @@
     "output": "Styles/Styles.css"
   },
   {
-        "inputs": [ "Assets/Site.less" ],
-        "output": "Styles/Site.css"
-    }
+    "inputs": [ "Assets/Site.less" ],
+    "output": "Styles/Site.css"
+  }
 ]

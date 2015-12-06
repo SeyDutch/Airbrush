@@ -140,6 +140,7 @@
     <Compile Include="Services\ContactInfoService.cs" />
     <Compile Include="Services\IContactFormService.cs" />
     <Compile Include="Services\IContactInfoService.cs" />
+    <Compile Include="Services\MailCredentials.cs" />
     <Compile Include="Services\MailService.cs" />
     <Compile Include="ViewModels\ContactFormEntryListViewModel.cs" />
     <Compile Include="ViewModels\ContactFormEntryViewModel.cs" />

@@ -5,11 +5,13 @@
     
     <h1> @T("Contact") </h1>
 
-    <button type="button" value="Form" onclick="location.href='@Url.Action( "Form", "Contact", new { area = "Airbrush" })'"><span>@T("Neem contact op")</span></button>
+   <br />
     
     <p>@Html.DisplayFor(x => x.MainText)</p>
 
     <p>@Html.DisplayFor(x => x.ExtraText)</p>
+
+    <br />
 
     <button type="button" value="Form" onclick="location.href='@Url.Action( "Form", "Contact", new { area = "Airbrush" })'" ><span>@T("Neem contact op")</span></button>
 
@@ -19,11 +21,11 @@
 
         @if (!String.IsNullOrWhiteSpace(Model.Phone))
         {
-            <div class="label">T: @Html.DisplayFor(x => x.Phone)</div>
+            <div class="">T: @Html.DisplayFor(x => x.Phone)</div>
         }
         @if (!String.IsNullOrWhiteSpace(Model.Email))
         {
-            <div class="label">E: @Html.DisplayFor(x => x.Email)</div>
+            <div class="">E: @Html.DisplayFor(x => x.Email)</div>
         }
 
         <br />
@@ -36,19 +38,19 @@
                 <h3>Adres</h3>
                 if (!String.IsNullOrWhiteSpace(Model.AddressName))
                 {
-                    <div class="label">@Html.DisplayFor(x => x.AddressName)</div>
+                    <div class="">@Html.DisplayFor(x => x.AddressName)</div>
                 }
                 if (!String.IsNullOrWhiteSpace(Model.AddressLine))
                 {
-                    <div class="label">@Html.DisplayFor(x => x.AddressLine)</div>
+                    <div class="">@Html.DisplayFor(x => x.AddressLine)</div>
                 }
                 if (!String.IsNullOrWhiteSpace(Model.PostalCode))
                 {
-                    <div class="label">@Html.DisplayFor(x => x.PostalCode)</div>
+                    <div class="">@Html.DisplayFor(x => x.PostalCode)</div>
                 }
                 if (!String.IsNullOrWhiteSpace(Model.City))
                 {
-                    <div class="label">@Html.DisplayFor(x => x.City)</div>
+                    <div class="">@Html.DisplayFor(x => x.City)</div>
                 }
         }
 

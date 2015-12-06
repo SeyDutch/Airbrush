@@ -75,9 +75,14 @@
     <Content Include="Assets.json" />
     <Content Include="Assets\Styles.less" />
     <Content Include="Content\blue-texture.jpg" />
+    <Content Include="Content\casino.jpg" />
     <Content Include="Content\colorful.jpg" />
     <Content Include="Content\colorful_flower.jpg" />
+    <Content Include="Content\fireplacebg.jpg" />
+    <Content Include="Content\loungebg.jpg" />
+    <Content Include="Content\neonbg.jpg" />
     <Content Include="Recipies\CarouselImageRecipe.xml" />
+    <Content Include="Scripts\bgchange.js" />
     <Content Include="Scripts\carousel_widget_init.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Styles\Site.min.css" />

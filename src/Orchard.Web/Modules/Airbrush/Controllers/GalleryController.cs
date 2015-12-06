@@ -11,11 +11,13 @@ using System;
 
 namespace Airbrush.Controllers {
     [Themed]
-    public class GalleryController : Controller {
+    public class GalleryController : Controller
+    {
         public IOrchardServices Services { get; set; }
         private readonly INotifier _notifier;
 
-        public GalleryController(IOrchardServices services, INotifier notifier) {
+        public GalleryController(IOrchardServices services, INotifier notifier)
+        {
             Services = services;
             T = NullLocalizer.Instance;
             _notifier = notifier;
@@ -28,7 +30,7 @@ namespace Airbrush.Controllers {
         {
             var vm = new GalleryViewModel();
             var galleryItems = Services.ContentManager.Query("GalleryItem").List();
-            if(galleryItems.Any())
+            if (galleryItems.Any())
             {
                 var parts = galleryItems.Select(g => g.Parts.Single(x => x.Fields.Any(f => f.Name == "Imagepicker")));
                 parts.ToList().ForEach(p => vm.GalleryItems.Add(new GalleryViewModel.GalleryItemViewModel(
@@ -36,8 +38,13 @@ namespace Airbrush.Controllers {
                     ((dynamic)p.Fields.Single(x => x.Name == "Imagepicker")).MediaParts[0].Title,
                     ((dynamic)p.Fields.Single(x => x.Name == "Imagepicker")).MediaParts[0].Caption)));
             }
-                        
             return View(vm);
+        }
+
+        [HttpGet]
+        public ActionResult Gallery3D(GalleryViewModel model)
+        {
+            return null;
         }
     }
 }

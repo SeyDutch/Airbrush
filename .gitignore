@@ -190,3 +190,6 @@ src/Orchard.Azure/Orchard.Azure.CloudService/Staging/
 */.vs/*
 /src/Orchard.Web/Modules/TinyMceDeluxe
 /src/Orchard.Web/Modules/_Backup
+
+#mail credentials
+/src/Orchard.Web/Modules/Airbrush/Services/MailCredentials.cs
