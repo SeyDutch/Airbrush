@@ -13,10 +13,11 @@
   <Match Path="/About">
     <Place Parts_Common_Metadata="-"/>
   </Match>
--->
+
   <Match ContentType="CarouselImage">
-    <Match DisplayType="Summary">
+    <Match DisplayType="Detail">
       <Place Fields_Image="Content"/>
     </Match>
   </Match>
+  -->
 </Placement>

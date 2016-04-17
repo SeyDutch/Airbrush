@@ -1,4 +1,5 @@
 ﻿@using Orchard.ContentManagement;
+@using PJS.Bootstrap.Models;
 
 @{ 
     Style.Require("Site").AtFoot();
@@ -17,7 +18,7 @@
 @{
     Display.Insertions();
 
-    //var settings = WorkContext.CurrentSite.As<BootstrapThemeSettingsPart>();
+    var settings = WorkContext.CurrentSite.As<BootstrapThemeSettingsPart>();
 
     /* Some useful shortcuts or settings
     ***************************************************************/

@@ -8,6 +8,8 @@ namespace Airbrush
         {
             var manifest = builder.Add();
             manifest.DefineStyle("Slideshow").SetUrl("pgwslideshow.min.css");
+            manifest.DefineStyle("Gallery").SetUrl("Gallery.min.css");
+
             manifest.DefineScript("PgwSlideshow").SetUrl("pgwslideshow.min.js").SetDependencies("jQuery", "Bootstrap");
             manifest.DefineScript("Slideshow").SetUrl("slideshow_init.js").SetDependencies("PgwSlideshow");
         }
